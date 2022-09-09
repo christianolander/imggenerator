@@ -25,6 +25,7 @@ div.content {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation: fadeIn 1s; 
 }
 
 div {
@@ -37,12 +38,30 @@ div {
 }
 
 div.links {
-    padding: 20px;
+    padding: 32px;
+    display: flex;
+    
+
+    
 }
 
-div.links a{
+div.links a {
     color: #fff;
-    font-size: 1.5vh;
+    font-size: 2vh !important;
+}
+
+a.btn {
+    padding: 12px 20px;
+    text-decoration: none !important;
+    background-color: #fff;
+    color: #000 !important;
+    transform: skew(-12deg);
+    font-size: 2.5vh !important;
+    transition: all 0.3s;
+}
+
+a.btn :hover {
+    background-color: pink !important;
 }
 
 img {
@@ -52,3 +71,11 @@ img {
     border-radius: 16px;
     border: 2px solid #f2f2f2;;
 }
+
+
+@keyframes fadeIn {
+    0% { opacity: 0;
+        transform: translateY(45px); }
+    100% { opacity: 1;
+        transform: translateY(0px); }
+  }
